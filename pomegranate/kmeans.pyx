@@ -399,8 +399,7 @@ cdef class Kmeans(Model):
 					n_seen_batches += batches_per_epoch
 					if n_seen_batches >= len(starts):
 						n_seen_batches = 0
-
-
+						
 					self.from_summaries(inertia)
 
 					distance_sum = sum( parallel(delayed(self.summarize, 
